@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/block_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="com.simon.fun.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/block_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CLEAR"
+            android:onClick="onClear"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="8dp"
+        android:background="@drawable/dialog_round_bg"
+        android:backgroundTint="#baac9f"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintTop_toBottomOf="@id/block_buttons"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/block_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/v0"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                layout="@layout/view_content"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintVertical_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/v1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/v4"/>
+
+            <include
+                android:id="@+id/v1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                layout="@layout/view_content"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintVertical_weight="1"
+                app:layout_constraintStart_toEndOf="@id/v0"
+                app:layout_constraintEnd_toStartOf="@id/v2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/v5"/>
+
+            <include
+                android:id="@+id/v2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                layout="@layout/view_content"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintVertical_weight="1"
+                app:layout_constraintStart_toEndOf="@id/v1"
+                app:layout_constraintEnd_toStartOf="@id/v3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/v6"/>
+
+            <include
+                android:id="@+id/v3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                layout="@layout/view_content"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintVertical_weight="1"
+                app:layout_constraintStart_toEndOf="@id/v2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/v7"/>
+
+            <include
+                android:id="@+id/v4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                layout="@layout/view_content"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintVertical_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/v5"
+                app:layout_constraintTop_toBottomOf="@id/v0"
+                app:layout_constraintBottom_toTopOf="@id/v8"/>
+
+            <include
+                android:id="@+id/v5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                layout="@layout/view_content"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintVertical_weight="1"
+                app:layout_constraintStart_toEndOf="@id/v4"
+                app:layout_constraintEnd_toStartOf="@id/v6"
+                app:layout_constraintTop_toBottomOf="@id/v1"
+                app:layout_constraintBottom_toTopOf="@id/v9"/>
+
+            <include
+                android:id="@+id/v6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                layout="@layout/view_content"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintVertical_weight="1"
+                app:layout_constraintStart_toEndOf="@id/v5"
+                app:layout_constraintEnd_toStartOf="@id/v7"
+                app:layout_constraintTop_toBottomOf="@id/v2"
+                app:layout_constraintBottom_toTopOf="@id/v10"/>
+
+            <include
+                android:id="@+id/v7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                layout="@layout/view_content"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintVertical_weight="1"
+                app:layout_constraintStart_toEndOf="@id/v6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v3"
+                app:layout_constraintBottom_toTopOf="@id/v11"/>
+
+            <include
+                android:id="@+id/v8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                layout="@layout/view_content"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintVertical_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/v9"
+                app:layout_constraintTop_toBottomOf="@id/v4"
+                app:layout_constraintBottom_toTopOf="@id/v12"/>
+
+
+            <include
+                android:id="@+id/v9"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                layout="@layout/view_content"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintVertical_weight="1"
+                app:layout_constraintStart_toEndOf="@id/v8"
+                app:layout_constraintEnd_toStartOf="@id/v10"
+                app:layout_constraintTop_toBottomOf="@id/v5"
+                app:layout_constraintBottom_toTopOf="@id/v13"/>
+
+            <include
+                android:id="@+id/v10"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                layout="@layout/view_content"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintVertical_weight="1"
+                app:layout_constraintStart_toEndOf="@id/v9"
+                app:layout_constraintEnd_toStartOf="@id/v11"
+                app:layout_constraintTop_toBottomOf="@id/v6"
+                app:layout_constraintBottom_toTopOf="@id/v14"/>
+
+            <include
+                android:id="@+id/v11"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                layout="@layout/view_content"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintVertical_weight="1"
+                app:layout_constraintStart_toEndOf="@id/v10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v7"
+                app:layout_constraintBottom_toTopOf="@id/v15"/>
+
+            <include
+                android:id="@+id/v12"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                layout="@layout/view_content"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintVertical_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/v13"
+                app:layout_constraintTop_toBottomOf="@id/v8"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <include
+                android:id="@+id/v13"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                layout="@layout/view_content"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintVertical_weight="1"
+                app:layout_constraintStart_toEndOf="@id/v12"
+                app:layout_constraintEnd_toStartOf="@id/v14"
+                app:layout_constraintTop_toBottomOf="@id/v9"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <include
+                android:id="@+id/v14"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                layout="@layout/view_content"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintVertical_weight="1"
+                app:layout_constraintStart_toEndOf="@id/v13"
+                app:layout_constraintEnd_toStartOf="@id/v15"
+                app:layout_constraintTop_toBottomOf="@id/v10"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <include
+                android:id="@+id/v15"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                layout="@layout/view_content"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintVertical_weight="1"
+                app:layout_constraintStart_toEndOf="@id/v14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v11"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
